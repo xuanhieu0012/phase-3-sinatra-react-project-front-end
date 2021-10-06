@@ -1,38 +1,106 @@
 .App {
   text-align: center;
+  position:relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navLinks{
+  width: 100%;
+  background-color: rgb(221, 129, 230);
+  height: 150px;
+  position: relative;
+  top: 0px;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  align-content: center;
+  color: whitesmoke;
+  font-size: large;
+  z-index: 1;
+}
+.navLinks a{
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 10px 5px 10px 5px;
+}
+
+.storeName{
+  
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  right: 40%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  align-content: center;
+  color: black;
+  z-index: 1;
+}
+.flowerCard{
+  position: relative;
+  margin: 0px 15px 0px 15px;
+  width: 160px;
+}
+.flowerImg{
+  height: 240px;
+  width: 160px;
+  border-radius: 10px;
+}
+.flowerContainer{
+  position: absolute;
+  top: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+};
+.logoImage{
+  height: 200px;
+  width: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.flowerBanner{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  z-index: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageFlower{
+  width: 1000 px;
+  height: 500px;
+  border-radius: 10px;
+}
+.right-arrow{
+  position:absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+}
+.left-arrow{
+  position:absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.slide.active{
+  opacity: 1;
+  transition-duration: 1.5s;
+  transform: scale(1.2);
 }
