@@ -31,7 +31,7 @@ function CartFlower({eachFlower, handleRemoveCartList}){
         <div className ="cartTextDetail">
             <div className="flowerName">
             <h1>{name}</h1> 
-            </div>
+            </div >
         
       
             Quanity: 

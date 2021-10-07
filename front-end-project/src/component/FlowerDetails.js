@@ -9,15 +9,15 @@ function FlowerDetails({flower, handleCartData}){
         </div>
         <div className="flowerDetailsText">
                 <h3>{name}</h3>
-                <p>Price: ${price} Quantity: {quantity}</p>
-                <p>Season: {season}</p>
-                <p> Color: {color}</p>
+                <p id="Price">Price: ${price} Quantity: {quantity}</p>
+                <p id="Season">Season: {season}</p>
+                <p id="Color"> Color: {color}</p>
             <div className="description">
                 <p>{description}</p>
             </div>
             
                 <button onClick={()=> handleCartData(flower)}>Add To Cart</button>
-                <button>Delete</button>
+                {/* <button>Delete</button> */}
             
         </div>
     </div>

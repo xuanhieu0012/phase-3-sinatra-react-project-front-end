@@ -5,7 +5,7 @@
 
 .navLinks{
   width: 100%;
-  background-color: rgb(221, 129, 230);
+  background-color: rgb(255, 255, 255);
   height: 150px;
   position: relative;
   top: 0px;
@@ -45,7 +45,7 @@
   height: 240px;
   width: 160px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 1px;
 }
 .flowerContainer{
   position: absolute;
@@ -55,10 +55,7 @@
   flex-wrap: wrap;
   justify-content: center;
 };
-.logoImage{
-  height: 200px;
-  width: 200px;
-}
+
 
 .flowerBanner{
   position: relative;
@@ -193,4 +190,187 @@
 }
 .header span h2{
   margin-left: 250px;
+}
+
+.flowerDetails h3{
+  font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 12pt;
+  color: #192841;
+  text-align: left;
+  border-bottom: 0.01em solid rgb(99, 99, 99);
+  word-spacing: 90px;
+  /* white-space: nowrap; */
+}
+/* .flowerDetails p{ */
+  /* font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  /* color: #192841;
+  font-size: 12pt */
+/* } */
+.button button{
+  /* border: none; */
+  /* border:none; */
+  color: white;
+  border-style: hidden;
+  background-color: #192841;
+  /* #FFC0CB */
+  padding-top: 1px;
+  padding-bottom: 0.50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 15px;
+  box-shadow: 0 4px rgb(145, 143, 143);
+
+}
+.button button:hover{
+  background-color: #FFC0CB;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button button:active{
+  background-color: #192841;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.inform a{
+  color: #192841;
+  font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  font-size: 15pt;
+  position: relative;
+  padding-right: 10pt;
+  right: -830px;
+  /* is at the upper right hand corner but doesnt adjsut */
+}
+.inform a:hover{
+  background-color: #192841;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.storeName h1{
+  color: #192841;
+  text-align: center;
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* margin: 0; */
+  margin-top: 25%;
+  /* margin-left: 0.1%; */
+}
+
+.logoImage{
+   height: 300px;
+   width:300px;
+   margin-top: 12%;
+}
+
+.flowerDetailsText h3{
+  /* color: rgb(250, 149, 166); */
+  color: #192841;
+  font-size: 50px;
+  /* text-decoration: underline 0.04em #192841; */
+  text-shadow: 2px 2px rgb(250, 149, 166);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flowerDetailsText p{
+  color: #192841;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.description p{
+  color: #192841;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flowerDetailsText button{
+  color: white;
+  border-style: hidden;
+  background-color: #192841;
+  /* #FFC0CB */
+  padding-top: 1px;
+  padding-bottom: 0.50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px rgb(145, 143, 143);
+  font-size: 20px;
+}
+
+.flowerDetailsText button:hover{
+  background-color: #FFC0CB;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.flowerDetailsText button:active{
+  background-color: #192841;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.header h2{
+  color: #192841;
+  text-shadow: 1.5px 1.5px rgb(197, 195, 195);
+  font-size: 40px;
+  padding-right: 30pt;
+  padding-left: 30pt;
+  padding-top: 5em;
+  
+}
+
+.flowerName h1{
+  /* Trying to make the name on one line when increasing the font-size*/
+  /* How to move quanity? */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+}
+
+.imageContainer{
+  position: relative;
+  left: -63px;
+}
+
+input[type=text]{
+  width: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number]{
+  width: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text]:focus {
+  background-color: rgb(189, 243, 189);
+}
+input[type=number]:focus {
+  background-color: rgb(189, 243, 189);
+}
+textarea {
+  width: 200px;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+label{
+  display: inline-block;
+}
+.formSubmit{
+  position: relative;
 }

@@ -5,6 +5,7 @@ function FlowersContainer({toggleDetail, settoggleDetail, handleCartData}){
     
     const [flowersData, setFlowersData] =useState([])
     const [flowerDetailsData, setFlowerDetailsData] = useState([])
+    const [deletebtn, setDeletebtn] = useState(false)
     
     
     
@@ -12,7 +13,14 @@ function FlowersContainer({toggleDetail, settoggleDetail, handleCartData}){
         fetch('http://localhost:9292/flowers')
         .then(res =>res.json())
         .then(flowerArray =>  setFlowersData(flowerArray))
-    },[])
+    },[deletebtn])
+
+    function handleDeleteBtn(id){
+        setDeletebtn(deletebtn => !deletebtn)
+        fetch(`http://localhost:9292/flowers/${id}`,{
+            method: "DELETE"
+        })
+    }
     const displayFlowers = flowersData.map(flower => <Flower key={flower.id} 
                                                     flower={flower} 
                                                     settoggleDetail={settoggleDetail} 
