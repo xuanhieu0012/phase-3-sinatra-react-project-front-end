@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 
 function Form(){
-const [pictureURL, setPictureURL] = useState("https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg")
+const [pictureURL, setPictureURL] = useState("https://i.imgur.com/CBtjmX0.png")
 const [formData, setFormData] = useState({
     name: "",
     season: "",
@@ -46,39 +46,39 @@ function handleChange(event){
 
     return <div className="formSubmit">
     <form onSubmit={handleSubmit}>
-        <h1>Submit Your New Flower</h1>
-        <img src={pictureURL} alt="flower image" />
+        <h1 id="submitHeader">Submit A New Flower!</h1>
+        <img className="submitImage"src={pictureURL} alt="flower image" />
         <br />
-        <label>
+        <label id="nameForm">
             Name of Flower:
-            <input type="text" id="name" value={formData.name} onChange={handleChange}></input>
+            <input type="text" id="nameBox" value={formData.name} onChange={handleChange}></input>
         </label>
         <br />
-        <label>Color: 
-            <input type="text" id="color" value={formData.color} onChange={handleChange}></input>
+        <label id="colorForm">Color: 
+            <input type="text" id="colorBox" value={formData.color} onChange={handleChange}></input>
         </label>
         <br />
-        <label>Url Image: 
-            <input type="text" id="image_url" value={formData.image_url} onChange={handleChange}></input>
+        <label id="urlForm">Url Image: 
+            <input type="text" id="image_urlBox" value={formData.image_url} onChange={handleChange}></input>
         </label>
         <br />
-        <label>Season: 
-            <input type="text" id="season" value={formData.season} onChange={handleChange}></input>
+        <label id="seasonForm">Season: 
+            <input type="text" id="seasonBox" value={formData.season} onChange={handleChange}></input>
         </label>
         <br />
-        <label>Price: 
-            <input type="number" id="price" value={formData.price} onChange={handleChange}></input>
+        <label id="priceForm">Price: 
+            <input type="number" id="priceBox" value={formData.price} onChange={handleChange}></input>
         </label>
         <br />
-        <label>Quantity: 
-            <input type="number"id="quantity" value={formData.quantity} onChange={handleChange}></input>
+        <label id="quantityForm">Quantity: 
+            <input type="number"id="quantityBox" value={formData.quantity} onChange={handleChange}></input>
         </label>
         <br />
-        <label>Description: </label>
-        <textarea id="description" value={formData.description} onChange={handleChange}></textarea>
+        <label id="descriptionForm">Description: </label>
+        <textarea id="descriptionBox" value={formData.description} onChange={handleChange}></textarea>
         <br />
         
-        <button type="submit">Add to List</button>
+        <button className="submitButton" type="submit">Add to List</button>
     </form>
     </div>
 }

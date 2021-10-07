@@ -13,14 +13,23 @@ function Flower({flower, settoggleDetail, setFlowerDetails, handleCartData}){
     return <div className="flowerCard">
         <img className="flowerImg" src={image_url} alt={name} onClick={handleImageDetails}/>
         <div className="flowerDetails">
-            <h3>{name} ${price}</h3> 
-            {/* <p>${price}</p> */}
-            {/* <p>Overnight Shipping</p> */}
-            <div className="button">
-            <button onClick={() => handleCartData(flower)}>Add To Cart</button>
-            <button>🗑️</button>
+            <div className="nameProduct">
+                <h3 >{name} </h3>
+            </div> 
+            <div className="price">
+                <h3 >${price} </h3>
             </div>
         </div>
+            {/* <p>${price}</p> */}
+            {/* <p>Overnight Shipping</p> */}
+            <div className="buttonContainer">
+                <div className="buttonAdd">
+                    <button onClick={() => handleCartData(flower)}>Add To Cart</button>
+                </div>
+                <div>
+                    <button>🗑️</button>
+                </div>
+            </div>
     </div>
 }
 

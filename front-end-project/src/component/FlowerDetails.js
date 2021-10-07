@@ -7,18 +7,20 @@ function FlowerDetails({flower, handleCartData}){
         <div>
             <img className="flowerImgDetails" src={image_url} alt={name} />
         </div>
-        <div className="flowerDetailsText">
+        <div className="flowerDetailsTextContainer">
+            <div className="flowerTitle">
                 <h3>{name}</h3>
+            </div>
                 <p id="Price">Price: ${price} Quantity: {quantity}</p>
                 <p id="Season">Season: {season}</p>
                 <p id="Color"> Color: {color}</p>
             <div className="description">
                 <p>{description}</p>
             </div>
-            
+            <div className="buttonDetailPage">
                 <button onClick={()=> handleCartData(flower)}>Add To Cart</button>
-                {/* <button>Delete</button> */}
-            
+                <button>Update</button>
+            </div>
         </div>
     </div>
     )}
