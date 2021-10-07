@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { ImageData }  from "./ImageData"
+import { ImageData }  from "../component/ImageData"
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
 const ImageSlider = ({imageData}) =>{
     const [image, setImage]= useState(0)

@@ -44,6 +44,7 @@
 .flowerImg{
   height: 240px;
   width: 160px;
+  object-fit: cover;
   border-radius: 10px;
 }
 .flowerContainer{
@@ -103,4 +104,93 @@
   opacity: 1;
   transition-duration: 1.5s;
   transform: scale(1.2);
+}
+.flowerCardDetails{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  
+}
+.flowerImgDetails{
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.flowerDetailsText{
+  font-size: 20px;
+  padding-left: 20px;
+}
+.button{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.cartContainer{
+  max-height: 200px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  
+  
+  
+}
+.imageContainer{
+  height: 200px;
+  width: 50%; 
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+.cartTextDetail{
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 20px;
+  position: relative;
+}
+.cartTextDetail p{
+  position: relative;
+  
+}
+
+.flowerName{
+  position: absolute;
+  top: 5px;
+}
+
+.cartHeader {
+  
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content:flex-start;
+  
+  
+  
+}
+.cartHeader h2{
+  margin-left: 250px;
+  margin-right: 100px;
+  position: relative;
+}
+.cartContainerList{
+  left: 0px;
+  position: relative;
+}
+
+.header h2{
+  display: inline;
+  margin: 0 120px;
+}
+.header span h2{
+  margin-left: 250px;
 }
