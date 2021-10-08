@@ -530,12 +530,12 @@ label  #nameForm #nameBox{
   
 }
 .cartContainerList .header{
- 
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin: 0px 150px 0px 100px;
+  margin: 0px 150px 0px 80px;
   flex-wrap: nowrap;
+  font-size: 34px;
 }
 .cartContainer {
   position: relative;
@@ -570,9 +570,10 @@ label  #nameForm #nameBox{
 
 .cartContainerList .cartTotal{
   position: absolute;
-  font-size: 50px;
-  right:250px;
+  font-size: 30px;
+  right: 50px;
   margin-bottom: 1000;
+  color: #192841;
 }
 #Price{
   color: #192841;
@@ -597,4 +598,15 @@ label  #nameForm #nameBox{
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
+}
+.cartContainerList .cartpageImage {
+  position: relative;
+  height: 730px;
+  width: 1540px;
+  bottom: 80px;
+  box-shadow: 0 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#cartTotal {
+  color: pink;
 }

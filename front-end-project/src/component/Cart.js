@@ -21,6 +21,7 @@ function Cart({cartData, handleRemoveCartList, handleCartData}){
 
     return (
     <div className="cartContainerList">
+       <img className="cartpageImage" src="https://i.imgur.com/571Ap2l.png" alt="cartpageImg" />
        <div className="header">
             <h2>Picture</h2>
             <h2>Name</h2>
@@ -32,6 +33,8 @@ function Cart({cartData, handleRemoveCartList, handleCartData}){
         {cartData.length === 0 ? <h1>You have nothing in cart</h1> : displayCartDataFlower}
         
         {cartData.length === 0 ? null: <div className="cartTotal">
+            =
+            <br />
             Total Flower Price: ${itemPrice} 
             <br />
             Tax: {taxRate}%
