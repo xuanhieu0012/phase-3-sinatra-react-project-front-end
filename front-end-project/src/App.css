@@ -109,10 +109,12 @@
 }
   
   
-.flowerImgDetails{
-  height: 400px;
-  width: 400px;
-  padding-left: 25px;
+.flowerCardDetails .flowerImgDetails{
+  position: relative;
+  right: 140px;
+  bottom: -40px;
+  height: 500px;
+  width: 500px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 10px 10px 10px grey;
@@ -203,11 +205,7 @@
 .flowerCard .flowerDetails .price{
   text-align: right;
 }
-/* .flowerDetails p{ */
-  /* font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-  /* color: #192841;
-  font-size: 12pt */
-/* } */
+
 .buttonContainer{
   display: flex;
   align-items: baseline;
@@ -216,18 +214,14 @@
   
 }
 .buttonContainer button{
- 
   color: white;
   border-style: hidden;
   background-color: #192841;
-  /* #FFC0CB */
-  
   border-radius: 15px;
   box-shadow: 0 4px rgb(145, 143, 143);
   z-index: 6;
-  
-  
 }
+
 .buttonContainer button:hover{
   background-color: #FFC0CB;
   color: white;
@@ -238,16 +232,19 @@
   box-shadow: 0 2px #666;
   transform: translateY(4px);
 }
+
 .inform a{
   color: #192841;
   font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-decoration: none;
-  font-size: 15pt;
+  font-size: 16pt;
   position: relative;
   padding-right: 10pt;
   right: -830px;
-  /* is at the upper right hand corner but doesnt adjsut */
-}
+  top: 15pt;
+} 
+
+
 .inform a:hover{
   background-color: #192841;
   color: white;
@@ -267,30 +264,59 @@
    width:300px;
    margin-top: 12%;
 }
+
+/* CHANGED */
 .flowerDetailsTextContainer .flowerTitle h3{
   /* color: rgb(250, 149, 166); */
   margin: 5px 0px 10px 0px;
   color: #192841;
-  font-size: 50px;
+  font-size: 65px;
   /* text-decoration: underline 0.04em #192841; */
   text-shadow: 2px 2px rgb(250, 149, 166);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* CHANGED  */
 .flowerDetailsTextContainer .description{
   color: #192841;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
+  width: 700px;
 }
+
+/* CHANGED  */
 .description p{
   color: #192841;
   font-family: Arial, Helvetica, sans-serif;
+  border: solid 0.2em #192841
 }
+
+/* CHANGED  */
+#Price{
+  color: #192841;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CHANGED  */
+#Season {
+  color: #192841;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CHANGED  */
+#Color {
+  color: #192841;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
 .flowerDetailsTextContainer .buttonDetailPage button {
   color: white;
   border-style: hidden;
   background-color: #192841;
-  /* #FFC0CB */
   padding-top: 1px;
   padding-bottom: 0.50px;
   padding-left: 10px;
@@ -337,9 +363,9 @@ input[type=text]{
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=number]{
-  width: 200px;
-  padding: 12px 20px;
+.formSubmit input[type=number]{
+  width: 270px;
+  height: 30px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid black;
@@ -352,9 +378,9 @@ input[type=text]:focus {
 input[type=number]:focus {
   background-color: rgb(189, 243, 189);
 }
-textarea {
-  width: 200px;
-  height: 100px;
+.formSubmit #descriptionBox {
+  width: 380px;
+  height: 250px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -362,6 +388,9 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+  position:relative;
+  top: 30px;
+  right: -60px;
 }
 label{
   display: inline-block;
@@ -469,20 +498,56 @@ label{
   box-shadow: 0 0 25px 6px rgba(0, 0, 0, 0.2);
   border: solid 0.1px black;
 } 
-label  #nameForm #nameBox{
-  justify-content: space-between;
-}
-.formSubmit #nameForm {
+
+/* CHANGED */
+
+
+/* CHANGED FROM HERE*/
+/* #nameBox{
+  position:relative;
+  right: 50px;
+} */
+
+/* .formSubmit #colorBox{
   position: relative;
-  top: -45px;
+  right: -18px;
+} */
+
+/* .formSubmit #image_urlBox{
+  position: relative;
+  right: 11px;
+} */
+
+/* .formSubmit #seasonBox{
+  position: relative;
+  right: -1px;
+} */
+
+/* .formSubmit #priceBox{
+  position: relative;
+  right: -50px;
+}
+
+.formSubmit #quantityBox{
+  position: relative;
+  right: -28px;
+} */
+
+/* TO HERE */
+
+.nameForm  {
+  position: relative;
+  top: -30px;
+  right: 52px;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
-  justify-content: space-between;
 }
+
 .formSubmit #colorForm{
   position: relative;
   top: -20px;
+  right: -15px;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
@@ -490,6 +555,7 @@ label  #nameForm #nameBox{
 .formSubmit #urlForm{
   position: relative;
   top: -20px;
+  right: 15px;;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
@@ -497,6 +563,7 @@ label  #nameForm #nameBox{
 .formSubmit #seasonForm{
   position: relative;
   top: -10px;
+  right: 0.2px;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
@@ -504,25 +571,32 @@ label  #nameForm #nameBox{
 .formSubmit #priceForm{
   position: relative;
   top: -10px;
+  right: -50px;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
-#quantityForm{
+
+.formSubmit #quantityForm{
+  position: relative;
+  right: -30px;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* #CHANGED */
 .formSubmit #descriptionForm{
   position: relative;
-  top: 10px;
+  top: -70px;
+  right: -40px;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .formSubmit .submitButton {
   position: relative;
-  top: 20px;
+  top: 50px;
   bottom: 20px;
   color: white;
   background-color: #192841;
@@ -541,4 +615,55 @@ label  #nameForm #nameBox{
   background-color: #FFC0CB;
   color: white;
   box-shadow: 0 16px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.cartContainerList{
+  position: relative;
+  top:200px
+  
+}
+.cartContainerList .header{
+ 
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 150px 0px 100px;
+  flex-wrap: nowrap;
+}
+.cartContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+
+}
+
+.imageContainer{
+  position:relative;
+  height: 200px;
+  width: 200px; 
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 40px 20px 40px;
+  
+}
+.cartContainer .CartFlowerName{
+  margin: 0px 0px 0px 220px
+}
+.cartContainer .cartQuantity{
+
+  position: absolute;
+  right: 510px
+}
+.cartPrice{
+  position: absolute;
+  right:170px
+}
+
+.cartContainerList .cartTotal{
+  position: absolute;
+  font-size: 50px;
+  right:250px;
+  margin-bottom: 1000;
 }

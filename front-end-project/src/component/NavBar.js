@@ -11,6 +11,7 @@ function NavBar({settoggleDetail}) {
                 <NavLink to="/about">About Us</NavLink>
                 <NavLink to="/submitForm">Submit New Flower</NavLink>
                 <NavLink to="/cart">Cart</NavLink>
+
                 <div className="storeName">
                     <h1>The Flower Shop</h1>
                 </div>

@@ -49,7 +49,7 @@ function handleChange(event){
         <h1 id="submitHeader">Submit A New Flower!</h1>
         <img className="submitImage"src={pictureURL} alt="flower image" />
         <br />
-        <label id="nameForm">
+        <label className="nameForm">
             Name of Flower:
             <input type="text" id="nameBox" value={formData.name} onChange={handleChange}></input>
         </label>

@@ -23,8 +23,7 @@ function About(){
         <h1 id="header5">Thank you for using our app!</h1>
         <h2 id="header6">Happy shopping! -Hieu Nguyen and Yaneizy Castillo</h2>
         
-        <img id="aboutUsLogo" src="https://i.imgur.com/Fxoz84f.png" alt="aboutuslogo"/>
-
+        <img id="aboutUsLogo"src="https://i.imgur.com/Fxoz84f.png" alt="aboutUsLogo"/>
     </div>
 
     )

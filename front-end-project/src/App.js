@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Switch, Route } from "react-router-dom";
 import { useState } from 'react';
@@ -14,13 +13,20 @@ function App() {
   const [cartData, setCartData]= useState([])
   
   function handleCartData(flowerData){
-    if (cartData.find(flower => flower.id === flowerData.id) === undefined){
-    setCartData([...cartData, flowerData ])
+    const exist = cartData.find(x => x.id === flowerData.id)
+    if (exist){
+    setCartData(cartData.map(x => x.id === flowerData.id ? {...exist, qty: exist.qty + 1} : x))
+    } else{
+      setCartData([...cartData, {...flowerData, qty: 1}])
     }
 }
-  function handleRemoveCartList(id){
-    const newCart = cartData.filter(flower => flower.id != id)
-    setCartData(newCart)
+  function handleRemoveCartList(flowerData){
+    const exist = cartData.find(x => x.id === flowerData.id)
+    if (exist.qty === 1){
+      setCartData(cartData.filter(x => x.id !== flowerData.id ))
+      } else{
+        setCartData(cartData.map(x => x.id === flowerData.id ? {...exist, qty: exist.qty - 1} : x))
+      }
   }
   return (
     <div className="App">
@@ -33,7 +39,7 @@ function App() {
                     <About />
                 </Route>
                 <Route path="/cart">
-                    <Cart cartData={cartData} handleRemoveCartList={handleRemoveCartList}/>
+                    <Cart cartData={cartData} handleRemoveCartList={handleRemoveCartList} handleCartData={handleCartData}/>
                 </Route>
                 <Route path="/submitForm">
                   <SubmitForm/>
