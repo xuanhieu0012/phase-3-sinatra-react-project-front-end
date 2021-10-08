@@ -57,6 +57,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  top: 90px;
+  position: relative;
+  border-top: 1px solid #192841;
 };
 
 
@@ -316,7 +319,10 @@ input[type=number]{
   box-sizing: border-box;
 }
 input[type=text]:focus {
-  background-color: rgb(189, 243, 189);
+  /* background-color: rgb(189, 243, 189); */
+  background-color: #ffb1b1;
+  border: none;
+  color: #192841;
 }
 input[type=number]:focus {
   background-color: rgb(189, 243, 189);
@@ -613,7 +619,6 @@ textarea {
   height: 1650px;
   margin: 50px;
   overflow: auto;
-  
   box-shadow: 0px 0px 8px 1px rgba(0,0,0,.75);
 }
 .formDetailsUpdate{
@@ -622,39 +627,67 @@ textarea {
   height: 750px;
   margin: 50px;
   overflow: auto;
-  
   box-shadow: 0px 0px 8px 1px rgba(0,0,0,.75);
   
 }
 label {
-  
   display: inline-block;
   color: #004D40;
-  
   font-size: 1.25em;
   transition: all .2s ease;
   z-index: 10;
   position: relative;
   top: 5px;
+
+  /* FOR SEARCH TEXT */
+  /* display: inline-block;
+    color: #192841;
+    font-size: 2.1em;
+    transition: all .2s ease;
+    z-index: 10;
+    position: relative;
+    top: 28px;
+    text-shadow: 1px 1px rgb(255, 178, 191); */
 }
 .input-container {
   width: 75%;
   position: relative;
   margin: 45px auto -25px;
+  font-size: 20px;
+  font-family: ariel;
 }
+
+
 input[type="text"] {
   width: 100%;
   position: relative;
   display: inline-block;
-  
   padding: 0 0 5px 0;
-  color: #004D40;
+  color: #192841;
   font-size: 30px;
   background-color: transparent;
   border: none;
   border-bottom: solid 2px #4DB6AC;
   outline: none;
   z-index: 20;
+
+  /* CHANGED */
+  /* position: relative;
+  top: 25px;
+  color: #192841;
+  font-size: 30px;
+  left: 325px;
+  right: 0;
+  width: 900px;
+  padding: 35px;
+  margin: -83px 0px 0px 0x;
+  background-color: #ffb1b1; */
+  /* background-color: #ff7575; */
+  /* border-radius: 20px;
+  border: none;
+  box-shadow: 0 1px 20px #777777, 0 0 0 20px #ffffffeb;
+  transform: scale(0.6); */
+  /* border-bottom: solid 4px black;; */
 }
 input[type="number"] {
   width: 100%;
@@ -694,8 +727,10 @@ input[type="submit"] {
   background-color: #4DB6AC;
   color: #E0F2F1;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.25em;
-  padding: 10px 0;
+  /* font-size: 1.25em;
+  padding: 10px 0; */
+  font-size: 1.40em;
+  padding: 4px 7px;
   border: solid #009688;
   border-width: 0 0 4px 0;
   border-radius: 3px;
@@ -725,3 +760,32 @@ input[type="submit"]:active {
   top: 800px;
   width: 95%;
   }
+
+  #search {
+  position: relative;
+  top: 25px;
+  color: #192841;
+  font-size: 30px;
+  left: 325px;
+  right: 0;
+  width: 900px;
+  padding: 35px;
+  margin: -83px 0px 0px 0x;
+  background-color: #ffb1b1; 
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 1px 20px #777777, 0 0 0 20px #ffffffeb;
+  transform: scale(0.6); 
+   
+  }
+
+ .searchbar #aboveSearchBar {  
+    display: inline-block;
+    color: #192841;
+    font-size: 2.1em;
+    transition: all .2s ease;
+    z-index: 10;
+    position: relative;
+    top: 28px;
+    text-shadow: 1px 1px rgb(255, 178, 191);
+  } 

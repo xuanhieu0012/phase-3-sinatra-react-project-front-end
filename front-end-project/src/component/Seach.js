@@ -11,11 +11,11 @@ function Search({onSearchWord} ) {
 
   return (
     <div className="searchbar">
-      <label htmlFor="search">Search Flowers:</label>
+      <label htmlFor="search" id="aboveSearchBar">Use the search bar to see if we have the type of flower you want!</label>
       <input
         type="text"
         id="search"
-        placeholder="Type a name of flower..."
+        placeholder="Search for flower..."
         onChange={handlesearch}
     />
     </div>
