@@ -6,12 +6,13 @@ function FlowersContainer({toggleDetail, settoggleDetail, handleCartData, search
     const [flowersData, setFlowersData] =useState([])
     const [flowerDetailsData, setFlowerDetailsData] = useState([])
     const [deletebtn, setDeletebtn] = useState(false)
+    const [toggleUpdate, setToggleUpdate] = useState(false)
 
     useEffect(() =>{
         fetch('http://localhost:9292/flowers')
         .then(res =>res.json())
         .then(flowerArray =>  setFlowersData(flowerArray))
-    },[deletebtn])
+    },[deletebtn, toggleUpdate])
 
     function handleDeleteBtn(id){
         setDeletebtn(deletebtn => !deletebtn)
@@ -32,7 +33,7 @@ function FlowersContainer({toggleDetail, settoggleDetail, handleCartData, search
                                                     handleDeleteBtn={handleDeleteBtn}
                                                     />)
 
-    const flowerDetails = flowerDetailsData === null ? settoggleDetail(true) : <FlowerDetails  flower={flowerDetailsData} settoggleDetail={settoggleDetail} handleCartData={handleCartData}/>
+    const flowerDetails = flowerDetailsData === null ? settoggleDetail(true) : <FlowerDetails  flower={flowerDetailsData} settoggleDetail={settoggleDetail} handleCartData={handleCartData} setToggleUpdate={setToggleUpdate}/>
     return <div className="flowerContainer">
         { toggleDetail === true ? flowerDetails :  displayFlowers}
     </div>

@@ -20,7 +20,7 @@ function handleSubmit(e){
         },
         body: JSON.stringify(formData)
     })
-    
+    setPictureURL("https://i.imgur.com/CBtjmX0.png")
     setFormData({
         name: "",
         season: "",

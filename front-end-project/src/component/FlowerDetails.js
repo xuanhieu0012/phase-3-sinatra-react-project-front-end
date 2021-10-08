@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import UpdateForm from "./UpdateForm"
-function FlowerDetails({flower, handleCartData}){
-    const {name, image_url, price, quantity, season, description, color} = flower
+function FlowerDetails({flower, handleCartData, setToggleUpdate}){
+    const {name, image_url, price, quantity, season, description, color, id} = flower
     const [toggleUpdateForm, setToggleUpdateForm] = useState(false)
     function handleUpdateButton(){
         setToggleUpdateForm(toggleUpdateForm => !toggleUpdateForm)
@@ -28,7 +28,7 @@ function FlowerDetails({flower, handleCartData}){
                 <button onClick={handleUpdateButton}>Update</button>
             </div>
             <div className="updateForm">
-               {toggleUpdateForm === true ? <UpdateForm /> : null}
+               {toggleUpdateForm === true ? <UpdateForm setToggleUpdate={setToggleUpdate} id={id}/> : null}
             </div>
             
         </div>

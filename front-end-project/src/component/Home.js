@@ -6,7 +6,7 @@ function Home({toggleDetail, settoggleDetail,handleCartData}){
     const [searchWord, setSearchWord] = useState("")
     return <div>
         <Header />
-        <Search onSearchWord={setSearchWord}/>
+        {toggleDetail === true ? null :<Search onSearchWord={setSearchWord}/>}
         <FlowersContainer settoggleDetail={settoggleDetail} toggleDetail={toggleDetail} handleCartData={handleCartData} searchWord={searchWord}/>
     </div>
 }

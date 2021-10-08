@@ -1,6 +1,6 @@
 import React,{useState} from "react"
 
-function UpdateForm({id}){
+function UpdateForm({id, setToggleUpdate}){
     const [formDataUpdate, setformDataUpdate]= useState({
     price: 0,
     quantity: 1,
@@ -10,6 +10,7 @@ function UpdateForm({id}){
 
 function handleSubmit(e){
     e.preventDefault();
+    setToggleUpdate(toggleUpdate=> !toggleUpdate)
     fetch(`http://localhost:9292/flowers/${id}`,{
         method: 'PATCH',
         headers: {
