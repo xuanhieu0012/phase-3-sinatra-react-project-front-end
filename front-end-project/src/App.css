@@ -213,9 +213,8 @@
   font-size: 15pt;
   position: relative;
   padding-right: 10pt;
-  right: -800px;
-  top: 100px
-  /* is at the upper right hand corner but doesnt adjsut */
+  right: -900px;
+  top: 20px
 }
 .inform a:hover{
   background-color: #192841;
@@ -789,3 +788,15 @@ input[type="submit"]:active {
     top: 28px;
     text-shadow: 1px 1px rgb(255, 178, 191);
   } 
+
+  #flowerDetailHeader {
+    position: absolute;
+    bottom: 20px;
+    display: inline-block;
+    color: #192841;
+    font-size: 4em;
+    transition: all .2s ease;
+    z-index: 10;
+    position: relative;
+    text-shadow: 1px 1px rgb(255, 178, 191);
+  }
