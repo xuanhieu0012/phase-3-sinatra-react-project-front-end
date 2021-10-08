@@ -58,12 +58,15 @@
   flex-wrap: wrap;
   justify-content: center;
 };
+
+
 .flowerBanner{
   position: relative;
   width: 100%;
   height: 500px;
   z-index: 2;
 }
+
 .slider {
   position: relative;
   height: 100vh;
@@ -92,6 +95,7 @@
   color: black;
   z-index: 10;
 }
+
 .slide {
   opacity: 0;
   transition-duration: 1s ease;
@@ -109,16 +113,17 @@
 }
   
   
-.flowerCardDetails .flowerImgDetails{
-  position: relative;
-  right: 140px;
-  bottom: -40px;
-  height: 500px;
-  width: 500px;
+
+
+.flowerImgDetails{
+  height: 400px;
+  width: 400px;
+  padding-left: 25px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 10px 10px 10px grey;
 }
+
 .flowerDetailsTextContainer{
   font-size: 20px;
     padding-left: 20px;
@@ -131,22 +136,6 @@
   bottom: 10px;
   left: 10px;
 }
-.cartContainer{
-  max-height: 200px;
-  padding: 20px;
-  position: relative;
-  display: flex;
-  width: 100%;
-  
-  
-  
-}
-.imageContainer{
-  height: 200px;
-  width: 50%; 
-  object-fit: cover;
-  border-radius: 10px;
-}
 .cartTextDetail{
   display: flex;
   justify-content: center;
@@ -157,41 +146,13 @@
   padding-right: 20px;
   position: relative;
 }
-.cartTextDetail p{
-  position: relative;
-  
-}
+
+
 .flowerName{
   position: absolute;
   top: 5px;
 }
-.cartHeader {
-  
-  display: flex;
-  align-content: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content:flex-start;
-  
-  
-  
-}
-.cartHeader h2{
-  margin-left: 250px;
-  margin-right: 100px;
-  position: relative;
-}
-.cartContainerList{
-  left: 0px;
-  position: relative;
-}
-.header h2{
-  display: inline;
-  margin: 0 120px;
-}
-.header span h2{
-  margin-left: 250px;
-}
+
 .flowerCard .flowerDetails {
   font-family: Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 12pt;
@@ -205,7 +166,11 @@
 .flowerCard .flowerDetails .price{
   text-align: right;
 }
-
+/* .flowerDetails p{ */
+  /* font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  /* color: #192841;
+  font-size: 12pt */
+/* } */
 .buttonContainer{
   display: flex;
   align-items: baseline;
@@ -214,14 +179,18 @@
   
 }
 .buttonContainer button{
+ 
   color: white;
   border-style: hidden;
   background-color: #192841;
+  /* #FFC0CB */
+  
   border-radius: 15px;
   box-shadow: 0 4px rgb(145, 143, 143);
   z-index: 6;
+  
+  
 }
-
 .buttonContainer button:hover{
   background-color: #FFC0CB;
   color: white;
@@ -237,19 +206,18 @@
   color: #192841;
   font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-decoration: none;
-  font-size: 16pt;
+  font-size: 15pt;
   position: relative;
   padding-right: 10pt;
   right: -830px;
-  top: 15pt;
-} 
-
-
+  /* is at the upper right hand corner but doesnt adjsut */
+}
 .inform a:hover{
   background-color: #192841;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 .storeName h1{
   color: #192841;
   text-align: center;
@@ -259,13 +227,13 @@
   margin-top: 25%;
   /* margin-left: 0.1%; */
 }
+
 .logoImage{
    height: 300px;
    width:300px;
    margin-top: 12%;
 }
 
-/* CHANGED */
 .flowerDetailsTextContainer .flowerTitle h3{
   /* color: rgb(250, 149, 166); */
   margin: 5px 0px 10px 0px;
@@ -275,7 +243,7 @@
   text-shadow: 2px 2px rgb(250, 149, 166);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* CHANGED  */
+
 .flowerDetailsTextContainer .description{
   color: #192841;
   font-size: 20px;
@@ -284,39 +252,17 @@
   width: 700px;
 }
 
-/* CHANGED  */
 .description p{
   color: #192841;
   font-family: Arial, Helvetica, sans-serif;
   border: solid 0.2em #192841
 }
 
-/* CHANGED  */
-#Price{
-  color: #192841;
-  font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* CHANGED  */
-#Season {
-  color: #192841;
-  font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* CHANGED  */
-#Color {
-  color: #192841;
-  font-size: 23px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
 .flowerDetailsTextContainer .buttonDetailPage button {
   color: white;
   border-style: hidden;
   background-color: #192841;
+  /* #FFC0CB */
   padding-top: 1px;
   padding-bottom: 0.50px;
   padding-left: 10px;
@@ -325,35 +271,29 @@
   box-shadow: 0 4px rgb(145, 143, 143);
   font-size: 20px;
 }
+
 .flowerDetailsTextContainer .buttonDetailPage button:hover{
   background-color: #FFC0CB;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 .flowerDetailsTextContainer .buttonDetailPage button:active{
   background-color: #192841;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
 }
-.header h2{
-  color: #192841;
-  text-shadow: 1.5px 1.5px rgb(197, 195, 195);
-  font-size: 40px;
-  padding-right: 30pt;
-  padding-left: 30pt;
-  padding-top: 5em;
-  
-}
+
+
 .flowerName h1{
   /* Trying to make the name on one line when increasing the font-size*/
   /* How to move quanity? */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 23px;
 }
-.imageContainer{
-  position: relative;
-  left: -63px;
-}
+
+
+
 input[type=text]{
   width: 200px;
   padding: 12px 20px;
@@ -363,9 +303,10 @@ input[type=text]{
   border-radius: 4px;
   box-sizing: border-box;
 }
-.formSubmit input[type=number]{
-  width: 270px;
-  height: 30px;
+
+input[type=number]{
+  width: 200px;
+  padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid black;
@@ -378,9 +319,9 @@ input[type=text]:focus {
 input[type=number]:focus {
   background-color: rgb(189, 243, 189);
 }
-.formSubmit #descriptionBox {
-  width: 380px;
-  height: 250px;
+textarea {
+  width: 200px;
+  height: 100px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -388,9 +329,6 @@ input[type=number]:focus {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
-  position:relative;
-  top: 30px;
-  right: -60px;
 }
 label{
   display: inline-block;
@@ -498,58 +436,25 @@ label{
   box-shadow: 0 0 25px 6px rgba(0, 0, 0, 0.2);
   border: solid 0.1px black;
 } 
-
-/* CHANGED */
-
-
-/* CHANGED FROM HERE*/
-/* #nameBox{
-  position:relative;
-  right: 50px;
-} */
-
-/* .formSubmit #colorBox{
-  position: relative;
-  right: -18px;
-} */
-
-/* .formSubmit #image_urlBox{
-  position: relative;
-  right: 11px;
-} */
-
-/* .formSubmit #seasonBox{
-  position: relative;
-  right: -1px;
-} */
-
-/* .formSubmit #priceBox{
-  position: relative;
-  right: -50px;
+label  #nameForm #nameBox{
+  justify-content: space-between;
 }
-
-.formSubmit #quantityBox{
+.formSubmit #nameForm {
   position: relative;
-  right: -28px;
-} */
-
-/* TO HERE */
-
-.nameForm  {
-  position: relative;
-  top: -30px;
-  right: 52px;
+  top: -45px;
   color: #192841;
+  margin: 30px;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
 }
-
 .formSubmit #colorForm{
   position: relative;
   top: -20px;
   right: -15px;
   color: #192841;
   font-size: 30px;
+  margin: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .formSubmit #urlForm{
@@ -557,6 +462,7 @@ label{
   top: -20px;
   right: 15px;;
   color: #192841;
+  margin: 30px;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -566,6 +472,7 @@ label{
   right: 0.2px;
   color: #192841;
   font-size: 30px;
+  margin: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .formSubmit #priceForm{
@@ -574,29 +481,28 @@ label{
   right: -50px;
   color: #192841;
   font-size: 30px;
+  margin: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .formSubmit #quantityForm{
   position: relative;
   right: -30px;
   color: #192841;
+  margin: 30px;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* #CHANGED */
 .formSubmit #descriptionForm{
   position: relative;
   top: -70px;
-  right: -40px;
+  margin: 30px;
   color: #192841;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .formSubmit .submitButton {
   position: relative;
-  top: 50px;
+  top: 20px;
   bottom: 20px;
   color: white;
   background-color: #192841;
@@ -617,6 +523,7 @@ label{
   box-shadow: 0 16px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+/* hieu code */
 .cartContainerList{
   position: relative;
   top:200px
@@ -666,4 +573,28 @@ label{
   font-size: 50px;
   right:250px;
   margin-bottom: 1000;
+}
+#Price{
+  color: #192841;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#Season {
+  color: #192841;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#Color {
+  color: #192841;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nameForm  {
+  position: relative;
+  top: -30px;
+  right: 52px;
+  color: #192841;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }

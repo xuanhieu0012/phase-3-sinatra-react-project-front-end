@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-
 function Form(){
 const [pictureURL, setPictureURL] = useState("https://i.imgur.com/CBtjmX0.png")
 const [formData, setFormData] = useState({
@@ -11,7 +10,6 @@ const [formData, setFormData] = useState({
     image_url: "",
     description:"",
     store_id: 1
-
 })
 function handleSubmit(e){
     e.preventDefault();
@@ -32,7 +30,6 @@ function handleSubmit(e){
         image_url: "",
         description:"",
         store_id: 1
-    
     })
 }
 function handleChange(event){
@@ -41,9 +38,7 @@ function handleChange(event){
     setPictureURL(()=>event.target.value) 
     }
     setFormData({...formData, [key]: event.target.value})
-    
 }
-
     return <div className="formSubmit">
     <form onSubmit={handleSubmit}>
         <h1 id="submitHeader">Submit A New Flower!</h1>
@@ -77,10 +72,8 @@ function handleChange(event){
         <label id="descriptionForm">Description: </label>
         <textarea id="descriptionBox" value={formData.description} onChange={handleChange}></textarea>
         <br />
-        
         <button className="submitButton" type="submit">Add to List</button>
     </form>
     </div>
 }
-
 export default Form

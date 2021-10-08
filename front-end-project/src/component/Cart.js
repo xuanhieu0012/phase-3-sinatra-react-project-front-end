@@ -7,7 +7,7 @@ function Cart({cartData, handleRemoveCartList, handleCartData}){
     
     const itemPrice = cartData.reduce((a,c) => a + c.price * c.qty, 0)
     const taxRate = 8
-    const subtotal = (itemPrice - (itemPrice * (taxRate /100))).toFixed(2)
+    const subtotal = (itemPrice + (itemPrice * (taxRate /100))).toFixed(2)
     
     const displayCartDataFlower= cartData.map(eachflower => <CartFlower 
                                                                     key={eachflower.id} 
