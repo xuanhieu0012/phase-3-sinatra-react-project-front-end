@@ -1,14 +1,12 @@
 import React,{useState, useEffect} from "react"
 import Flower from "../component/Flower"
 import FlowerDetails from "../component/FlowerDetails"
-function FlowersContainer({toggleDetail, settoggleDetail, handleCartData}){
+function FlowersContainer({toggleDetail, settoggleDetail, handleCartData, searchWord}){
     
     const [flowersData, setFlowersData] =useState([])
     const [flowerDetailsData, setFlowerDetailsData] = useState([])
     const [deletebtn, setDeletebtn] = useState(false)
-    
-    
-    
+
     useEffect(() =>{
         fetch('http://localhost:9292/flowers')
         .then(res =>res.json())
@@ -21,11 +19,17 @@ function FlowersContainer({toggleDetail, settoggleDetail, handleCartData}){
             method: "DELETE"
         })
     }
-    const displayFlowers = flowersData.map(flower => <Flower key={flower.id} 
+    const filterSearch = flowersData.filter(flower => 
+   
+        flower.name.toLowerCase().includes(searchWord.toLowerCase())
+    
+    )
+    const displayFlowers = filterSearch.map(flower => <Flower key={flower.id} 
                                                     flower={flower} 
                                                     settoggleDetail={settoggleDetail} 
                                                     setFlowerDetails={setFlowerDetailsData}
                                                     handleCartData={handleCartData}
+                                                    handleDeleteBtn={handleDeleteBtn}
                                                     />)
 
     const flowerDetails = flowerDetailsData === null ? settoggleDetail(true) : <FlowerDetails  flower={flowerDetailsData} settoggleDetail={settoggleDetail} handleCartData={handleCartData}/>

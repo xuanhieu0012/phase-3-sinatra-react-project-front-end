@@ -1,8 +1,8 @@
 import React from "react"
 
-function Flower({flower, settoggleDetail, setFlowerDetails, handleCartData}){
+function Flower({flower, settoggleDetail, setFlowerDetails, handleCartData, handleDeleteBtn}){
    
-    const {name, image_url, price, quantity, season, id} = flower
+    const {name, image_url, price,  id} = flower
     
     function handleImageDetails(){
         settoggleDetail(true)
@@ -27,7 +27,7 @@ function Flower({flower, settoggleDetail, setFlowerDetails, handleCartData}){
                     <button onClick={() => handleCartData(flower)}>Add To Cart</button>
                 </div>
                 <div>
-                    <button>🗑️</button>
+                    <button onClick={() =>handleDeleteBtn(id)}>🗑️</button>
                 </div>
             </div>
     </div>

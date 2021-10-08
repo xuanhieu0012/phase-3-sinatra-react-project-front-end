@@ -1,7 +1,13 @@
-import React from "react"
-
+import React, {useState} from "react"
+import UpdateForm from "./UpdateForm"
 function FlowerDetails({flower, handleCartData}){
     const {name, image_url, price, quantity, season, description, color} = flower
+    const [toggleUpdateForm, setToggleUpdateForm] = useState(false)
+    function handleUpdateButton(){
+        setToggleUpdateForm(toggleUpdateForm => !toggleUpdateForm)
+    }
+
+
     return (
     <div className="flowerCardDetails">
         <div>
@@ -19,8 +25,12 @@ function FlowerDetails({flower, handleCartData}){
             </div>
             <div className="buttonDetailPage">
                 <button onClick={()=> handleCartData(flower)}>Add To Cart</button>
-                <button>Update</button>
+                <button onClick={handleUpdateButton}>Update</button>
             </div>
+            <div className="updateForm">
+               {toggleUpdateForm === true ? <UpdateForm /> : null}
+            </div>
+            
         </div>
     </div>
     )}

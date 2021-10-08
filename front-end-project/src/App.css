@@ -24,9 +24,9 @@
 .storeName{
   
   height: 60px;
-  position: absolute;
-  top: 20px;
-  right: 40%;
+  position: relative;
+  top: -20px;
+  right: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 };
 
 
@@ -107,7 +107,7 @@
 }
 .flowerCardDetails{
   display: flex;
-  padding-left: 30px;
+  padding: 30px;
   position: relative;
   flex-direction: row;
 }
@@ -118,15 +118,16 @@
 .flowerImgDetails{
   height: 400px;
   width: 400px;
-  padding-left: 25px;
+  left: 0px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 10px 10px 10px grey;
 }
 
 .flowerDetailsTextContainer{
-  font-size: 20px;
-    padding-left: 20px;
+    font-size: 20px;
+    padding-left: 100px;
+    margin: 0px 0px 0px 50px;
     display: flex;
     flex-direction: column
   
@@ -209,7 +210,8 @@
   font-size: 15pt;
   position: relative;
   padding-right: 10pt;
-  right: -830px;
+  right: -800px;
+  top: 100px
   /* is at the upper right hand corner but doesnt adjsut */
 }
 .inform a:hover{
@@ -330,9 +332,7 @@ textarea {
   font-size: 16px;
   resize: none;
 }
-label{
-  display: inline-block;
-}
+
 .formSubmit{
   position: relative;
 }
@@ -420,44 +420,38 @@ label{
   border-radius: 90%;
   box-shadow: 0 0 25px 6px rgba(0, 0, 0, 0.2);
 }
-.formSubmit #submitHeader {
-  position: relative;
-  top: -125px;
+.formDetails #submitHeader {
+  
   color: #192841;
   text-shadow: 1px 1px #ff9cd9;
   font-size: 60px;
 }
-.formSubmit .submitImage{
-  position: relative;
-  top: -80px;
+.formDetails .submitImage{
+
   height: 600px;
   width: 765px;
   border-radius: 20px;
   box-shadow: 0 0 25px 6px rgba(0, 0, 0, 0.2);
   border: solid 0.1px black;
 } 
-label  #nameForm #nameBox{
-  justify-content: space-between;
-}
-.formSubmit #nameForm {
-  position: relative;
-  top: -45px;
+
+/* .formDetails #nameForm {
   color: #192841;
-  margin: 30px;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   justify-content: space-between;
 }
-.formSubmit #colorForm{
-  position: relative;
+
+.formDetails #colorForm{
+  
   top: -20px;
   right: -15px;
   color: #192841;
   font-size: 30px;
   margin: 30px;
   font-family: Arial, Helvetica, sans-serif;
-}
-.formSubmit #urlForm{
+} 
+ .formSubmit #urlForm{
   position: relative;
   top: -20px;
   right: 15px;;
@@ -494,7 +488,7 @@ label  #nameForm #nameBox{
 }
 .formSubmit #descriptionForm{
   position: relative;
-  top: -70px;
+   top: -70px; 
   margin: 30px;
   color: #192841;
   font-size: 30px;
@@ -514,14 +508,14 @@ label  #nameForm #nameBox{
   border-radius: 15px;
   box-shadow: 0 5px rgb(145, 143, 143);
   font-size: 30px;
-}
-.formSubmit .submitButton:hover{
+} */
+/* .formSubmit .submitButton:hover{
   position: relative;
   top: 20px;
   background-color: #FFC0CB;
   color: white;
   box-shadow: 0 16px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
+} */
 
 /* hieu code */
 .cartContainerList{
@@ -590,15 +584,17 @@ label  #nameForm #nameBox{
   font-size: 23px;
   font-family: Arial, Helvetica, sans-serif;
 }
+​
 
-.nameForm  {
+ /* .nameForm  {
   position: relative;
   top: -30px;
   right: 52px;
   color: #192841;
+  margin: 0px;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 .cartContainerList .cartpageImage {
   position: relative;
   height: 730px;
@@ -610,3 +606,122 @@ label  #nameForm #nameBox{
 #cartTotal {
   color: pink;
 }
+/* From here for the form */
+.formDetails {
+  background-color: #E0F2F1;
+  width: 95%;
+  height: 1650px;
+  margin: 50px;
+  overflow: auto;
+  
+  box-shadow: 0px 0px 8px 1px rgba(0,0,0,.75);
+}
+.formDetailsUpdate{
+  background-color: #E0F2F1;
+  width: 95%;
+  height: 750px;
+  margin: 50px;
+  overflow: auto;
+  
+  box-shadow: 0px 0px 8px 1px rgba(0,0,0,.75);
+  
+}
+label {
+  
+  display: inline-block;
+  color: #004D40;
+  
+  font-size: 1.25em;
+  transition: all .2s ease;
+  z-index: 10;
+  position: relative;
+  top: 5px;
+}
+.input-container {
+  width: 75%;
+  position: relative;
+  margin: 45px auto -25px;
+}
+input[type="text"] {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  
+  padding: 0 0 5px 0;
+  color: #004D40;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px #4DB6AC;
+  outline: none;
+  z-index: 20;
+}
+input[type="number"] {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  font-size: 1.25em;
+  padding: 0 0 5px 0;
+  color: #004D40;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px #4DB6AC;
+  outline: none;
+  z-index: 20;
+}
+textarea{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  font-size: 1.25em;
+  padding: 0 0 5px 0;
+  color: #004D40;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px #4DB6AC;
+  outline: none;
+  z-index: 20;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  margin: auto;
+  width: 50%;
+  background-color: #4DB6AC;
+  color: #E0F2F1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  padding: 10px 0;
+  border: solid #009688;
+  border-width: 0 0 4px 0;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+input[type="submit"]:hover {
+  background: #26A69A;
+  border: solid #00897B;
+  border-width: 0 0 4px 0;
+  position: relative;
+  background-color: #FFC0CB;
+  color: white;
+  box-shadow: 0 16px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input[type="submit"]:active {
+  background: #009688;
+  border: solid transparent;
+  border-width: 0 0 0px 0;
+}
+.searchbar{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 800px;
+  width: 95%;
+  }

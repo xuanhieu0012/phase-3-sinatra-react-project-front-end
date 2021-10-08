@@ -1,9 +1,9 @@
-import React,{useState} from "react";
+import React from "react";
 
 function CartFlower({eachFlower, handleRemoveCartList, handleCartData}){
     
    
-    const {image_url, name,  price , id, qty}= eachFlower
+    const {image_url, name,  price , qty}= eachFlower
     
   
     return(

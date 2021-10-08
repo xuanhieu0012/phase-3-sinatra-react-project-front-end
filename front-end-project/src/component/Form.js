@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 function Form(){
-const [pictureURL, setPictureURL] = useState("https://i.imgur.com/CBtjmX0.png")
+const [pictureURL, setPictureURL] = useState("")
 const [formData, setFormData] = useState({
     name: "",
     season: "",
@@ -20,7 +20,7 @@ function handleSubmit(e){
         },
         body: JSON.stringify(formData)
     })
-    setPictureURL('https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg')
+    
     setFormData({
         name: "",
         season: "",
@@ -33,47 +33,55 @@ function handleSubmit(e){
     })
 }
 function handleChange(event){
-    const key = event.target.id
+    
+    const key = event.target.name
     if (key === "image_url" ) {
-    setPictureURL(()=>event.target.value) 
+    setPictureURL(()=> event.target.value) 
     }
     setFormData({...formData, [key]: event.target.value})
 }
-    return <div className="formSubmit">
-    <form onSubmit={handleSubmit}>
-        <h1 id="submitHeader">Submit A New Flower!</h1>
-        <img className="submitImage"src={pictureURL} alt="flower image" />
-        <br />
-        <label className="nameForm">
-            Name of Flower:
-            <input type="text" id="nameBox" value={formData.name} onChange={handleChange}></input>
-        </label>
-        <br />
-        <label id="colorForm">Color: 
-            <input type="text" id="colorBox" value={formData.color} onChange={handleChange}></input>
-        </label>
-        <br />
-        <label id="urlForm">Url Image: 
-            <input type="text" id="image_urlBox" value={formData.image_url} onChange={handleChange}></input>
-        </label>
-        <br />
-        <label id="seasonForm">Season: 
-            <input type="text" id="seasonBox" value={formData.season} onChange={handleChange}></input>
-        </label>
-        <br />
-        <label id="priceForm">Price: 
-            <input type="number" id="priceBox" value={formData.price} onChange={handleChange}></input>
-        </label>
-        <br />
-        <label id="quantityForm">Quantity: 
-            <input type="number"id="quantityBox" value={formData.quantity} onChange={handleChange}></input>
-        </label>
-        <br />
-        <label id="descriptionForm">Description: </label>
-        <textarea id="descriptionBox" value={formData.description} onChange={handleChange}></textarea>
-        <br />
-        <button className="submitButton" type="submit">Add to List</button>
+    return (
+    <form onSubmit={handleSubmit} >
+        <div className="formDetails">
+            <h1 id="submitHeader">Submit A New Flower!</h1>
+            <img className="submitImage"src={pictureURL === "" ? "https://i.imgur.com/CBtjmX0.png" : pictureURL } alt="flower" />
+        
+        
+            <div className="input-container"> 
+                <label className="nameForm">Name of Flower:</label>
+                <input type="text" id="nameBox" name="name" value={formData.name} onChange={handleChange}></input>
+            </div>
+            <div className="input-container"> 
+                <label id="colorForm">Color: </label>
+                <input type="text" id="colorBox" name="color" value={formData.color} onChange={handleChange}></input>
+            </div> 
+        
+            <div className="input-container"> 
+                <label id="urlForm">Url Image: </label>
+                <input type="text" id="image_urlBox" name="image_url" value={formData.image_url} onChange={handleChange}></input>
+            </div>
+            <div className="input-container"> 
+                <label id="seasonForm">Season: </label>
+                <input type="text" id="seasonBox" name="season" value={formData.season} onChange={handleChange}></input>
+            </div>
+            <div className="input-container"> 
+                <label id="priceForm">Price: </label>
+                <input type="number" id="priceBox" name="price" value={formData.price} onChange={handleChange}></input>
+            </div>
+            <div className="input-container"> 
+                <label id="quantityForm">Quantity: </label>
+                <input type="number"id="quantityBox" name="quantity" value={formData.quantity} onChange={handleChange}></input>
+            </div>
+            <div className="input-container"> 
+                <label id="descriptionForm">Description: </label>
+                <textarea type="text" id="descriptionBox" name="description" value={formData.description} onChange={handleChange}></textarea>
+            </div>
+        
+            <div class="input-container">
+                <input type="submit" value="Add To List" />
+            </div>
+        </div>
     </form>
-    </div>
+    )
 }
 export default Form
